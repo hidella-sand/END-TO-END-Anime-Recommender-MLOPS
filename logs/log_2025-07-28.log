@@ -1,0 +1,32 @@
+2025-07-28 11:06:57,939 - INFO - Succesfully read the YAML file
+2025-07-28 11:06:57,939 - INFO - \U0001f680 Initiating the data ingestion process: Preparing to fetch raw data from GCP bucket...
+2025-07-28 11:06:57,940 - INFO - \U0001f680 Starting the data ingestion pipeline...
+2025-07-28 11:07:03,209 - INFO - \U0001f4e6 File "anime.csv" fetched from bucket and saved locally at: artifacts/raw\anime.csv
+2025-07-28 11:07:08,969 - INFO - \U0001f4e6 File "anime_with_synopsis.csv" fetched from bucket and saved locally at: artifacts/raw\anime_with_synopsis.csv
+2025-07-28 11:25:47,690 - INFO - \U0001f3ac Raw data "animelist.csv" secured and optimized — 5 million rows ready for action. Location: artifacts/raw\animelist.csv
+2025-07-28 11:25:47,709 - INFO - \u2705 Data ingestion completed successfully.
+2025-07-28 11:25:47,709 - INFO - \U0001f4e6 Data ingestion routine has exited.
+2025-07-28 13:16:23,753 - INFO - \u2705 DataProcessor initialized successfully.
+2025-07-28 13:16:24,431 - INFO - \u2705 Ratings data loaded successfully.
+2025-07-28 13:16:24,553 - INFO - \u2705 Users filtered: Kept users with \u2265400 ratings.
+2025-07-28 13:16:25,420 - INFO - \u2705 Ratings scaled using Min-Max normalization.
+2025-07-28 13:16:25,519 - INFO - \u2705 Successfully encoded user and anime IDs.
+2025-07-28 13:16:25,891 - INFO - \u2705 Data split into training and testing sets.
+2025-07-28 13:16:25,904 - INFO - \u2705 Saved user2user_encoded.pkl to artifacts/processed
+2025-07-28 13:16:25,915 - INFO - \u2705 Saved user2user_decoded.pkl to artifacts/processed
+2025-07-28 13:16:25,956 - INFO - \u2705 Saved anim2anime_encoded.pkl to artifacts/processed
+2025-07-28 13:16:25,998 - INFO - \u2705 Saved anim2anime_decoded.pkl to artifacts/processed
+2025-07-28 13:16:29,453 - INFO - \u2705 All training/testing arrays and ratings DataFrame saved successfully.
+2025-07-28 13:16:34,341 - INFO - \u2705 Anime metadata and synopsis files saved successfully.
+2025-07-28 13:16:34,343 - INFO - \U0001f389 Data processing pipeline completed successfully.
+2025-07-28 13:26:31,730 - INFO - \u2705 ModelTraining and Comet ML initialized.
+2025-07-28 13:26:31,826 - INFO - \u2705 Training and testing datasets loaded successfully.
+2025-07-28 13:26:31,896 - INFO - Succesfully read the YAML file
+2025-07-28 13:26:31,896 - INFO - \u2705 Loaded model configuration from config.yaml
+2025-07-28 13:26:31,977 - INFO - \u2705 Model architecture created and compiled successfully.
+2025-07-28 13:27:09,546 - INFO - \u2705 Model training completed and best weights loaded.
+2025-07-28 13:27:09,546 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-07-28 13:27:09,610 - INFO - \u2705 Full model saved at artifacts/model\model.h5
+2025-07-28 13:27:09,612 - INFO - \u2705 Extracted and normalized weights from 'user_embedding' layer.
+2025-07-28 13:27:09,623 - INFO - \u2705 Extracted and normalized weights from 'anime_embedding' layer.
+2025-07-28 13:27:09,709 - INFO - \u2705 User and Anime embeddings saved and logged to Comet ML.
