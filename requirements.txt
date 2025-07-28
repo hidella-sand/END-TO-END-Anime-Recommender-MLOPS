@@ -11,3 +11,5 @@ wordcloud
 joblib
 comet_ml
 dvc
+dvc-gs
+flask
